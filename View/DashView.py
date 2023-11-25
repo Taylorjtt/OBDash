@@ -79,3 +79,39 @@ class DashView:
         self.voltsData.grid(column=0, row=6, pady=(0,row_padding))
         self.AFRData.grid(column=1, row=6, pady=(0,row_padding))
         self.GearData.grid(column=2, row=6, pady=(0,row_padding))
+
+
+    def setData(self, data):
+        sensors = {
+            'oil_pressure': self.oilPressureData,
+            'oil_temperature': self.oilTempData,
+            'water_temperature': self.waterTempData,
+            'speed': self.speedData,
+            'rpm': self.RPMData,
+            'fuel_level': self.FuelLevelData,
+            'battery_volts': self.voltsData,
+            'air_fuel_ratio': self.AFRData,
+            'selected_gear': self.GearData  # Note: Not all vehicles support this
+        }
+
+        sensors = {
+            'oil_pressure': self.oilPressureData,
+            'oil_temperature': self.oilTempData,
+            'water_temperature': self.waterTempData,
+            'speed': self.speedData,
+            'rpm': self.RPMData,
+            'fuel_level': self.FuelLevelData,
+            'battery_volts': self.voltsData,
+            'air_fuel_ratio': self.AFRData,
+            'selected_gear': self.GearData  # Note: Not all vehicles support this
+        }
+        print(data)
+        for s, d in data.items():
+            print(d)
+            if d is None:
+                sensors[s].configure(text="0.0")
+            else:
+                sensors[s].configure(text=d.magnitude )
+
+
+
