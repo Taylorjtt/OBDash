@@ -32,5 +32,5 @@ if __name__ == "__main__":
     print("The height of Tkinter window:", App.root.winfo_height())
     SensorModel.initConnection()
     App.root.after(10, update)
-
+    print("coockie")
     App.root.mainloop()

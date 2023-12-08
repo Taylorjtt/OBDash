@@ -82,17 +82,7 @@ class DashView:
 
 
     def setData(self, data):
-        sensors = {
-            'oil_pressure': self.oilPressureData,
-            'oil_temperature': self.oilTempData,
-            'water_temperature': self.waterTempData,
-            'speed': self.speedData,
-            'rpm': self.RPMData,
-            'fuel_level': self.FuelLevelData,
-            'battery_volts': self.voltsData,
-            'air_fuel_ratio': self.AFRData,
-            'selected_gear': self.GearData  # Note: Not all vehicles support this
-        }
+
 
         sensors = {
             'oil_pressure': self.oilPressureData,
@@ -111,7 +101,7 @@ class DashView:
             if d is None:
                 sensors[s].configure(text="0.0")
             else:
-                sensors[s].configure(text=d.magnitude )
+                sensors[s].configure(text=d.magnitude)
 
 
 
