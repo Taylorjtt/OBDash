@@ -83,25 +83,25 @@ class DashView:
 
     def setData(self, data):
 
-
         sensors = {
-            'oil_pressure': self.oilPressureData,
-            'oil_temperature': self.oilTempData,
-            'water_temperature': self.waterTempData,
-            'speed': self.speedData,
-            'rpm': self.RPMData,
-            'fuel_level': self.FuelLevelData,
-            'battery_volts': self.voltsData,
-            'air_fuel_ratio': self.AFRData,
-            'selected_gear': self.GearData  # Note: Not all vehicles support this
+            'oil_pressure': {'data': self.oilPressureData, 'format': '{:.1f} PSI'},
+            'oil_temperature': {'data': self.oilTempData, 'format': '{:3d} °F'},
+            'water_temperature': {'data': self.waterTempData, 'format': '{:3d} °F'},
+            'speed': {'data': self.speedData, 'format': '{:3d} MPH'},
+            'rpm': {'data': self.RPMData/10, 'format': '{:.2f} RPM'},
+            'fuel_level': {'data': self.FuelLevelData, 'format': '{:.1f} %'},
+            'battery_volts': {'data': self.voltsData, 'format': '{:.1f} V'},
+            'air_fuel_ratio': {'data': self.AFRData, 'format': '{:.2f}'},
+            'selected_gear': {'data': self.GearData, 'format': '{}'}  # Note: Not all vehicles support this
         }
+
         print(data)
         for s, d in data.items():
             print(d)
             if d is None:
-                sensors[s].configure(text="0.0")
+                formatted_data = sensors[s]['format'].format(0.0)
+                sensors[s]['data'].configure(text=formatted_data)
             else:
-                sensors[s].configure(text=d.magnitude)
-
-
+                formatted_data = sensors[s]['format'].format(d.magnitude)
+                sensors[s]['data'].config(text=formatted_data)
 
