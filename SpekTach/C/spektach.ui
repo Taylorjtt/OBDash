@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SpekTach</class>
+ <widget class="QMainWindow" name="SpekTach">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1500</width>
+    <height>1500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="Lettering">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1500</width>
+      <height>1500</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>lettering.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RL1">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1500</width>
+      <height>1500</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>RL1.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RL1_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1500</width>
+      <height>1500</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>RL2.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RL1_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1500</width>
+      <height>1500</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>RL3.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RL1_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1500</width>
+      <height>1500</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>RL4.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RL1_5">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1500</width>
+      <height>1500</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>RL5.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RL1_6">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1500</width>
+      <height>1500</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>RL6.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="RL1_7">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1500</width>
+      <height>1500</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>RL7.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Background">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1500</width>
+      <height>1500</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>face.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="NEEDLE">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1500</width>
+      <height>1500</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>needle.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="Glass">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>1500</width>
+      <height>1500</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>glass.png</pixmap>
+    </property>
+   </widget>
+   <zorder>Background</zorder>
+   <zorder>Lettering</zorder>
+   <zorder>RL1</zorder>
+   <zorder>RL1_2</zorder>
+   <zorder>RL1_3</zorder>
+   <zorder>RL1_4</zorder>
+   <zorder>RL1_5</zorder>
+   <zorder>RL1_6</zorder>
+   <zorder>RL1_7</zorder>
+   <zorder>NEEDLE</zorder>
+   <zorder>Glass</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
