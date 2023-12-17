@@ -3,7 +3,7 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="1a2ac7e4-7add-4842-bf0c-27ea4027b7fa" name="dash">
-        <fileTransfer rootFolder="/home/john/dev/Dash" accessType="SFTP" host="192.168.1.102" port="22" sshConfigId="c402e724-d437-4309-aa3e-5ec169744b3a" sshConfig="john@192.168.1.102:22 password">
+        <fileTransfer rootFolder="/home/dash/OBDash" accessType="SFTP" host="obdash" port="22" sshConfigId="b2b431c8-8433-4a4c-866f-ff213babffeb" sshConfig="dash@obdash:22 password">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

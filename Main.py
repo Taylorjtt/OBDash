@@ -22,7 +22,7 @@ if __name__ == "__main__":
     customtkinter.set_appearance_mode("Dark")  # Modes: system (default), light, dark
     customtkinter.set_default_color_theme("blue")  # Themes: blue (default), dark-blue, green
     App.root = customtkinter.CTk()
-    App.root.attributes('-fullscreen', True)
+
     App.root.geometry('1024x600')
     App.view = DashView()
     print(App.view)
@@ -33,4 +33,5 @@ if __name__ == "__main__":
     SensorModel.initConnection()
     App.root.after(10, update)
 
+    App.root.attributes('-fullscreen', True)
     App.root.mainloop()
