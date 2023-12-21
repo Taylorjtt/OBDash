@@ -16,7 +16,7 @@ from PIL.ImageQt import ImageQt, QPixmap
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import Qt, QRect
-from PyQt5.QtGui import QColor, QPainter
+from PyQt5.QtGui import QColor, QPainter, QPalette
 
 width = 1500
 class Ui_SpekTach(object):
@@ -87,8 +87,9 @@ class Ui_SpekTach(object):
         self.circle_labels = [self.RL1,self.RL1_2, self.RL1_3, self.RL1_4, self.RL1_5,self. RL1_6,self.RL1_7]
 
         self.Glass.setObjectName("Glass")
-        self.Background.raise_()
         self.Lettering.raise_()
+        self.Background.raise_()
+
         self.RL1.raise_()
         self.RL1_2.raise_()
         self.RL1_3.raise_()
@@ -115,7 +116,7 @@ class Ui_SpekTach(object):
         SpekTach.setWindowTitle(_translate("SpekTach", "MainWindow"))
 
     def update_needle(self):
-        seconds = 10
+        seconds = 20
         if self.start_time is None:
             self.start_time = time.time()
 
@@ -143,8 +144,8 @@ class Ui_SpekTach(object):
                 # If 'off' state, set to gray or another 'off' color
                 self.setColorOfNonTransparentPixels(self.circle_labels[i], self.colors[0])
     def calculate_state(self, rpm):
-        rpm = max(3000, min(rpm, 5000))  # Clamp RPM value
-        return int(((rpm - 3000) / 2000) * 21)  # Map RPM to a state between 0 and 20
+        rpm = max(1000, min(rpm, 5000))  # Clamp RPM value
+        return int(((rpm - 1000) / 4000) * 22)  # Map RPM to a state between 0 and 20
     def valueToColorRB(self,value):
         """
         Map a numeric value to a rainbow color.
@@ -211,7 +212,7 @@ class Ui_SpekTach(object):
         angle = rpm/1000*28
         self.setNeedleAngle(angle)
         self.setColorOfNonTransparentPixels(self.Lettering,self.valueToColorRB(rpm))
-        #self.update_circles_based_on_rpm(rpm)
+        self.update_circles_based_on_rpm(rpm)
 
     def setColorOfNonTransparentPixels(self,label, color):
         pixmap = label.pixmap()
