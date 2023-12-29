@@ -11,7 +11,7 @@ top_padding = 40
 class DashView:
     def __init__(self):
 
-        self.dataPanel = customtkinter.CTkFrame(App.root, width=1910, height=1070, fg_color=Colors.bgcolor)
+        self.dataPanel = customtkinter.CTkFrame(App.root, width=599, height=600, fg_color=Colors.bgcolor)
 
         self.oilPressureLabel = getLargeLabel(self.dataPanel,"OILP")
         self.oilTempLabel = getLargeLabel(self.dataPanel, "OILT")
@@ -85,10 +85,10 @@ class DashView:
 
         sensors = {
             'oil_pressure': {'data': self.oilPressureData, 'format': '{:.1f} PSI'},
-            'oil_temperature': {'data': self.oilTempData, 'format': '{:3d} °F'},
-            'water_temperature': {'data': self.waterTempData, 'format': '{:3d} °F'},
-            'speed': {'data': self.speedData, 'format': '{:3d} MPH'},
-            'rpm': {'data': self.RPMData/10, 'format': '{:.2f} RPM'},
+            'oil_temperature': {'data': self.oilTempData, 'format': '{:3.0f} °F'},
+            'water_temperature': {'data': self.waterTempData, 'format': '{:3.0f} °F'},
+            'speed': {'data': self.speedData, 'format': '{:3.0f} MPH'},
+            'rpm': {'data': self.RPMData, 'format': '{:.2f} K'},
             'fuel_level': {'data': self.FuelLevelData, 'format': '{:.1f} %'},
             'battery_volts': {'data': self.voltsData, 'format': '{:.1f} V'},
             'air_fuel_ratio': {'data': self.AFRData, 'format': '{:.2f}'},
@@ -103,5 +103,5 @@ class DashView:
                 sensors[s]['data'].configure(text=formatted_data)
             else:
                 formatted_data = sensors[s]['format'].format(d.magnitude)
-                sensors[s]['data'].config(text=formatted_data)
+                sensors[s]['data'].configure(text=formatted_data)
 

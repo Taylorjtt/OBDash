@@ -2,7 +2,7 @@ from datetime import datetime
 
 import customtkinter
 
-import SensorModel
+from SpekTach import SensorModel
 from View.DashView import DashView
 from app import App
 
@@ -12,7 +12,7 @@ def updatePresenter(newPresenter):
 
 
 def update():
-    data = SensorModel.sample_sensor_values()
+    data = SensorModel.sample_fast_sensor_values()
     App.view.setData(data)
     App.root.after(10, update)
 
